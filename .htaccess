@@ -1,0 +1,21 @@
+Options +FollowSymLinks 
+
+
+RewriteEngine on
+
+RewriteRule ^logout$ res/php/user_actions/logout.php [QSA]
+
+#rutas admin
+RewriteRule ^admin/post$ admin/index.php?section=post [QSA]
+
+RewriteRule ^admin/categories$ admin/index.php?section=categories [QSA]
+
+
+
+#RUTAS user
+
+RewriteRule ^post/([0-9]+)$ index.php?section=post&posts_id=$1 [QSA]
+RewriteRule ^register$ index.php?section=register [QSA]
+RewriteRule ^login$ index.php?section=login [QSA]
+RewriteRule ^favorites$ index.php?section=favorites [QSA]
+
